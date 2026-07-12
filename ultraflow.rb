@@ -5,14 +5,14 @@
 class Ultraflow < Formula
   desc "Local board to run many AI coding agents in parallel over your CLI subscriptions"
   homepage "https://github.com/azdaev/ultraflow"
-  version "0.10.5"
+  version "0.10.6"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/azdaev/ultraflow/releases/download/v0.10.5/ultraflow_darwin_all.tar.gz"
-    sha256 "e7e781e0449af628418b0ea1da1b287e18b83a8f62d05857905975cef8933223"
+    url "https://github.com/azdaev/ultraflow/releases/download/v0.10.6/ultraflow_darwin_all.tar.gz"
+    sha256 "00574da8505656cacc69ac51acb4b70d0b91c7718d08bef2ff390cd4310bc1af"
 
     define_method(:install) do
       bin.install "ultraflow"
@@ -21,15 +21,15 @@ class Ultraflow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/azdaev/ultraflow/releases/download/v0.10.5/ultraflow_linux_amd64.tar.gz"
-      sha256 "e4c90886ac145ba4b02a41264ef88acae20c780c4a91b9d9b9b3757619be56fa"
+      url "https://github.com/azdaev/ultraflow/releases/download/v0.10.6/ultraflow_linux_amd64.tar.gz"
+      sha256 "a4c2794604907adc3834fcd0a682a88bbbbca171256bfcbe52796366b3be97de"
       define_method(:install) do
         bin.install "ultraflow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/azdaev/ultraflow/releases/download/v0.10.5/ultraflow_linux_arm64.tar.gz"
-      sha256 "59d80c7a874ec5cf25278d1c555fb261db5a2a23487c3251985ba25c95b02fbc"
+      url "https://github.com/azdaev/ultraflow/releases/download/v0.10.6/ultraflow_linux_arm64.tar.gz"
+      sha256 "efca645b443415de05298146c89e7326996cc82749aa3e9f4c213d6a79a37ebc"
       define_method(:install) do
         bin.install "ultraflow"
       end
