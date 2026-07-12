@@ -12,7 +12,7 @@ class Ultraflow < Formula
 
   on_macos do
     url "https://github.com/azdaev/ultraflow/releases/download/v0.6.0/ultraflow_darwin_all.tar.gz"
-    sha256 "a5eebde4c3b64ed3a29a083b3eb4e7c1721a211f156b3de29ce55a245a3c3abd"
+    sha256 "91855121f9a6c8dfe583127ac1d423f79ba23f35fe7f1b0dbdd4eb16c3f343e8"
 
     define_method(:install) do
       bin.install "ultraflow"
@@ -22,14 +22,14 @@ class Ultraflow < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/azdaev/ultraflow/releases/download/v0.6.0/ultraflow_linux_amd64.tar.gz"
-      sha256 "dc9ffcb43abef8e080b2c3b8892842b73fc2863ff2234641a2f490c9112c3cb2"
+      sha256 "953f89d853ad8bb986c5dff16ad0fc97e87867408e1994597b27161311b4870b"
       define_method(:install) do
         bin.install "ultraflow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/azdaev/ultraflow/releases/download/v0.6.0/ultraflow_linux_arm64.tar.gz"
-      sha256 "9d4d73b1b22c01ed15c6bf675bb7f495eb8d65efb0b625cd4d21454558cf10c2"
+      sha256 "37d317c37fdae9153750e81cc351ef2f7aa06a1a3651e001f7fbb9818e262cb3"
       define_method(:install) do
         bin.install "ultraflow"
       end
